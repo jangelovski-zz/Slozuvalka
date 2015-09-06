@@ -4,11 +4,11 @@ public class FaultyCompressor {
 		String toReturn = "";
 		int brojac = 1;
 		for(int i = 0; i < input.length(); i++){
-			if(i == input.length()-1){
-				if(input.charAt(i) != input.charAt(i-1)){
-					toReturn += input.charAt(i) + "1";
+			if(i == input.length()-1){ // proverka dali i e dojden do poslednio char
+				if(input.charAt(i) != input.charAt(i-1)){ //ako e dojden i ako != na prethodnio znaci sam e
+					toReturn += input.charAt(i) + "1"; // dodavas go charo i + dodavas 1 oti e sam
 				}
-				else toReturn += input.charAt(i) + Integer.toString(brojac);
+				else toReturn += input.charAt(i) + Integer.toString(brojac); // ako e ist kako prethodnite dodadi go kako obicno
 			}
 			else if(input.charAt(i) == input.charAt(i+1)){
 				brojac++;
